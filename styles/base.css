@@ -1,0 +1,80 @@
+body {
+    font-family: "Domine", serif;
+    font-style: normal;
+}
+p {
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    background-color: #EDB183;
+    color: #3A2E39;
+}
+header span {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 1rem;
+}
+header nav {
+    padding: 1rem;
+    display: flex;
+    background-color: #F15152;
+    justify-content: space-around;
+    height: 20px;
+}
+header nav a {
+    color: #F4D8CD;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+}
+header nav a:hover {
+    font-weight: 700;
+    color: #1E555C;
+    border-top: 1px solid #1E555C;
+}
+
+main {
+    width: 840px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 1rem;
+    column-gap: 20px;
+}
+main h1 {
+    grid-column: 1/3;
+}
+main section h2 {
+    background-color: #1E555C;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+}
+main section img {
+    float: right;
+    margin: 1rem;
+}
+
+.countryImg{
+    float: left;
+}
+.country {
+    background-color: transparent;
+    color: black;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+    width:300px;
+    justify-self: center;
+}
+
+footer {
+    padding: 0.5rem;
+    background-color: #3A2E39;
+    color: #F4D8CD;
+    text-align: center;
+}

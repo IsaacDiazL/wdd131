@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="country or place where you live, have visited, or wish to visit">
+    <meta name="author" content="Isaac Diaz">
+    <title>Place 🗺️</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Funnel+Display&display=swap" rel="stylesheet"></head>
+<body>
+    <header>
+        <h1>Cuetzalan Puebla Mexico</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/large-place.webp" media="(min-width: 68em)">
+                <source srcset="images/medium-place.webp" media="(min-width: 42em)">
+                <img src="images/small-place.webp" alt="Cuetzalan image">
+            </picture>
+            <div class="placeInfo" id="data">
+                <h2>Data</h2>
+                <label>Area:</label><p>735 km²</p>
+                <label>Population:</label><p>6402</p>
+                <label>Capital:</label><p>Puebla City</p>
+                <label>Languages:</label><p>Náhuatl, Spanish</p>
+                <label>Currency:</label><p>Mexican Peso (MXN)</p>
+                <label>Time Zone:</label><p>CST — Central Standard Time</p>
+                <label>Calling Code:</label><p>+233</p>
+            </div>
+            <div class="placeInfo" id="weather">
+                <h2>Weather</h2>
+                <img src="images/weather-icon.png" alt="weather icon" width="50" >
+                <label>Temperature:</label><p id="degrees"> 19 ºC</p>
+                <label>Conditions:</label><p > Mostly Cloudy</p>
+                <label>Wind:</label><p id="windSpeed"> 5 Km/h</p>
+                <label>Wind Chill:</label><p id="windChill"> </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+         <p>
+            <span id="currentyear"></span> Isaac Diaz Tijuana Mexico
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -4,7 +4,10 @@ const header = document.querySelector("header");
 const homebutton = document.querySelector("#home");
 const oldButton = document.querySelector("#old");
 const newButton = document.querySelector("#new");
+const largeButton = document.querySelector('#large');
+const smallButton = document.querySelector('#small');
 const display = document.querySelector(".img");
+const titleList = document.querySelector("#subtitle");
 
 hambutton.addEventListener('click', () => {
     mainnav.classList.toggle("show");
@@ -104,9 +107,11 @@ const showTemples = temples.map((temple) =>
         <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
     </section>`
 )
+
 display.innerHTML = showTemples.join("");
 
 homebutton.addEventListener('click', () => {
+  titleList.textContent = "Home";
   display.innerHTML = showTemples.join("");
 });
 
@@ -124,6 +129,7 @@ oldButton.addEventListener('click', () => {
         <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
     </section>`
   )
+  titleList.textContent = "Old";
   display.innerHTML = oldTemples.join("");
 });
 
@@ -141,7 +147,42 @@ newButton.addEventListener('click', () => {
         <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
     </section>`
   )
+  titleList.textContent = "New";
   display.innerHTML = newTemples.join("");
 });
 
+largeButton.addEventListener('click', () => {
+  const filterlarge = temples.filter((temple) => 
+    parseInt(temple.area) > 90000
+  )
 
+  const largeTemples = filterlarge.map((temple) => 
+    `<section>
+        <h2>${temple.templeName}</h2>
+        <p><strong>Location:</strong> ${temple.location}</p>
+        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+        <p><strong>Area:</strong> ${temple.area} sq ft</p>
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+    </section>`
+  )
+  titleList.textContent = "Large";
+  display.innerHTML = largeTemples.join("");
+});
+
+smallButton.addEventListener('click', () => {
+  const filtersmall = temples.filter((temple) => 
+    parseInt(temple.area) > 10000
+  )
+
+  const smallTemples = filtersmall.map((temple) => 
+    `<section>
+        <h2>${temple.templeName}</h2>
+        <p><strong>Location:</strong> ${temple.location}</p>
+        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+        <p><strong>Area:</strong> ${temple.area} sq ft</p>
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+    </section>`
+  )
+  titleList.textContent = "Small";
+  display.innerHTML = smallTemples.join("");
+});

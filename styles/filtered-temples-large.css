@@ -11,25 +11,26 @@
     .navigation {
         grid-column: 1/2;
         display: flex;
-        padding: 0;
         justify-content: space-around;
     }
     .navigation li {
         display: block;
         flex: 1;
     }
-    .navigation a {
-        padding: 1rem;
-    }
     main {
         text-align: center;
-        max-width: 800px;
+        max-width: 840px;
         margin: 0 auto;
+        min-height: 100vh;
     }
     .img {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px; */
+    }
+    .img section {
+        width:29%;
     }
     .img img {
         width: 100%;

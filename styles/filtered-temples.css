@@ -3,13 +3,15 @@
     padding: 0;
 }
 body {
-    width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #C5AFA4;
 }
 header {
     background-color: #071E22;
     color: white;
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
 }
 footer {
@@ -69,17 +71,23 @@ main {
 }
 .img {
     justify-content: center;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    
     margin-top: 1rem;
+}
+.img h2 {
+    background-color: #76818E;
+    border-radius: 0.7rem;
+    padding: 0.5rem;
 }
 .img img {
     width: 100%;
     margin: 0.5rem auto;
 }
 .img section {
+    width: 90%;
     border-radius: 1rem;
     padding: 0.5rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    margin: 1.5rem auto;
 }

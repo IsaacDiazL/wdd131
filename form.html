@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple HTML form example">
+    <meta name="author" content="Isaac Diaz">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansation&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h2>Product Review</h2>
+        <form class="review" action="review.html" method="get">
+            <fieldset>
+                <label><div>Product Name*</div>
+                <select name="product" id="product" required>
+                    <option value="" disabled selected>Select a Product</option>
+                    
+                </select> </label>
+                <div>Overall Rating*</div>
+                <span class="star-rating">
+                    <input type="radio" name="stars" id="star5" value="5"/>
+                    <label for="star5"></label>
+                    <input type="radio" name="stars" id="star4" value="4"/>
+                    <label for="star4"></label>
+                    <input type="radio" name="stars" id="star3" value="3"/>
+                    <label for="star3"></label>
+                    <input type="radio" name="stars" id="star2" value="2"/>
+                    <label for="star2"></label>
+                    <input type="radio" name="stars" id="star1" value="1" required/>
+                    <label for="star1"></label>
+                </span>
+                <label><div>Date of Installation*</div>
+                <input type="date" id="installDate" name="installDate" required></label>
+                <div>Which features did you find useful in the product?
+                    <em>(Check all that apply)</em></div>
+                <label><input type="checkbox" id="durability" name="features" value="yes">Durability</label>
+                <label><input type="checkbox" id="use" name="features" value="yes">Ease of Use</label>
+                <label><input type="checkbox" id="performance" name="features" value="yes">Performance</label>
+                <label><input type="checkbox" id="design" name="features" value="yes">Design</label>
+                <label><div>Written Review <span>(Optional)</span></div>
+                <textarea name="review" id="review" rows="5" placeholder="Type here..."></textarea></label>
+                <label><div>Your Name <span>(Optional)</span></div>
+                <input type="text" name="username" id="username" autocomplete="on"></label>
+                <div><span>Number of Reviews: </span><span id="ReviewCount"></span></div>
+                <input type="submit" value="Post Review">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span> Isaac Diaz Tijuana Mexico
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

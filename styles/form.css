@@ -11,7 +11,7 @@ main {
     width: 400px;
     margin: 0 auto;
 }
-h2 {
+h1 {
     padding: 1rem;
     background-color: #05204A;
     width: 100%;
@@ -33,7 +33,8 @@ footer {
     width: 100%;
 }
 .review fieldset {
-    border: none;   
+    border: none;  
+    margin-top: 1.2rem; 
 }
 .review div {
     margin: 1rem 0 0.5rem 0;
@@ -54,13 +55,14 @@ footer {
 }
 .review label {
     display: block;
+    font-weight: 700;
 }
 .review input[type='checkbox'] {
     margin-right: 0.5rem;
     transform: scale(1.2);
     margin-bottom: 0.8rem;
 }
-.review div span {
+.review span {
     color: #05204A;
     font-size: 0.8rem;
 }
@@ -99,12 +101,13 @@ footer {
 .star-rating label {
     width: 30px;
     height: 30px;
-    transition: 0.5 ease;
     color: orange;
+    font-weight: 100;
 }
 .star-rating label:hover {
-    color: red;
-    transition: 0.5 ease;
+    color: darkorange;
+    font-weight: 700;
+    transform: scale(1.1);
 }
 .star-rating label:before {
     content: '\2606';

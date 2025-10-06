@@ -18,39 +18,51 @@
 
     </header>
     <main>
-        <h2>Product Review</h2>
+        <h1>Product Review</h1>
         <form class="review" action="review.html" method="get">
             <fieldset>
-                <label><div>Product Name*</div>
+                <label>Product Name*
                 <select name="product" id="product" required>
-                    <option value="" disabled selected>Select a Product</option>
-                    
-                </select> </label>
-                <div>Overall Rating*</div>
+                    <option value="" disabled selected>Select a Product  &#9662;</option>
+                </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="star5">Overall Rating*</label>
                 <span class="star-rating">
-                    <input type="radio" name="stars" id="star5" value="5"/>
+                    <input type="radio" name="stars" id="star5" value="5">
                     <label for="star5"></label>
-                    <input type="radio" name="stars" id="star4" value="4"/>
+                    <input type="radio" name="stars" id="star4" value="4">
                     <label for="star4"></label>
-                    <input type="radio" name="stars" id="star3" value="3"/>
+                    <input type="radio" name="stars" id="star3" value="3">
                     <label for="star3"></label>
-                    <input type="radio" name="stars" id="star2" value="2"/>
+                    <input type="radio" name="stars" id="star2" value="2">
                     <label for="star2"></label>
-                    <input type="radio" name="stars" id="star1" value="1" required/>
+                    <input type="radio" name="stars" id="star1" value="1" required>
                     <label for="star1"></label>
                 </span>
-                <label><div>Date of Installation*</div>
-                <input type="date" id="installDate" name="installDate" required></label>
+            </fieldset>
+            <fieldset>
+                <label>Date of Installation*
+                <input type="date" id="installDate" name="installDate" required>
+                </label>
+            </fieldset>
+            <fieldset>
                 <div>Which features did you find useful in the product?
                     <em>(Check all that apply)</em></div>
                 <label><input type="checkbox" id="durability" name="features" value="yes">Durability</label>
                 <label><input type="checkbox" id="use" name="features" value="yes">Ease of Use</label>
                 <label><input type="checkbox" id="performance" name="features" value="yes">Performance</label>
                 <label><input type="checkbox" id="design" name="features" value="yes">Design</label>
-                <label><div>Written Review <span>(Optional)</span></div>
+            <fieldset>
+                <label>Written Review <span>(Optional)</span>
                 <textarea name="review" id="review" rows="5" placeholder="Type here..."></textarea></label>
-                <label><div>Your Name <span>(Optional)</span></div>
+            </fieldset>
+            <fieldset>
+                <label>Your Name <span>(Optional)</span>
                 <input type="text" name="username" id="username" autocomplete="on"></label>
+            </fieldset>
+            <fieldset>
                 <div><span>Number of Reviews: </span><span id="ReviewCount"></span></div>
                 <input type="submit" value="Post Review">
             </fieldset>
@@ -59,7 +71,7 @@
     <footer>
         <p>
             <span id="currentyear"></span> Isaac Diaz Tijuana Mexico
-        </p>
+        </p><br>
         <p id="lastModified"></p>
     </footer>
 </body>

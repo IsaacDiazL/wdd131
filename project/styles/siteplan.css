@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #0D5C63;
+    --secondary-color: #2A5F07;
+    --accent-color: #C0E8ED;
+    --second-accent-color: #BDF2A6;
+    --third-accent-color: #4fe4a6;
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +17,20 @@ h1 {
     font-family: "Protest Revolution", sans-serif;
     font-weight: 700;
     font-style: normal;
+    letter-spacing: 2px;
+    word-spacing: 15px;
 }
+p, ul,h2 {
+    padding: 1rem;
+}
+/* --------- HEADER --------- */
 header {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 120px 1fr;
     grid-template-rows: auto auto;
-    background-color: #0D5C63;
-    color: #C0E8ED;
+    background-color: var(--secondary-color);
+    color: var(--second-accent-color);
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.5);
 }
 header img {
     grid-column: 1/2;
@@ -30,52 +44,81 @@ header h1 {
     text-align: center;
     padding: 0.5rem;
     font-size: 2.2rem;
-    letter-spacing: 2px;
-    word-spacing: 15px;
 }
-header nav {
+.navigation {
     display: flex;
     overflow: hidden;
+    justify-content: space-evenly;
+    width: 100%;
 }
-header nav a{
+.navigation li {
+    list-style: none;
+}
+.navigation li a {
     text-decoration: none; 
-    color: #C0E8ED;
+    color: var(--second-accent-color);
     padding: 0.7rem;
     align-self: center;
-    flex: 1;
     text-align: center;
-    height: 100%;
     font-size: 1.2rem;
     font-weight: 700;
-    transition: all 0.5s ease;
 }
-header nav a:hover {
-    background-color: #C0E8ED;
-    color: #0D5C63;
-    transform: scale(1.1);
-    transition: all 0.3s ease-in;
+.navigation li a:hover {
+    color: var(--third-accent-color);
+    border-top: 3px solid var(--third-accent-color);
 }
+#menu {
+    display: none;
+}
+/* --------- MAIN --------- */
 main {
-    width: 840px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 1.5rem auto;
 }
-h2, h3, h4 {
-    margin-top: 1rem;
-    padding-left: 1rem;
+/* --------- CLASS HERO --------- */
+.hero {
+    position: relative;
 }
-p, ul {
+.hero picture img {
+    width: 100%;
+}
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 25%;  
+    width: 100%;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+/* --------- CLASS CONTAINER --------- */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem 0;
+    row-gap: 2rem;
+}
+.container img {
+    width: 90%;
+    justify-self: center;
+    border-radius: 1.5rem;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.6);
+}
+.container label {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    align-self: center;
     padding: 1rem;
 }
+.container label img {
+    display: none;
+}
+/* --------- FOOTER --------- */
 footer {
     background-color: #2A5F07;
     padding: 1rem;
     text-align: center;
     color: #BDF2A6;
-}
-
-.hero {
-    position: relative;
-}
-.hero img {
-    width: 100%;
 }

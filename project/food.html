@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website plan of the final project">
+    <meta name="author" content="Isaac Diaz">
+    <title>Explore El Salvador | Food</title>
+    <link rel="shortcut icon" href="images/icon-torogoz.webp" type="image/x-icon">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/small-siteplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/Salvador-logo.webp" alt="Branding Logo" >
+        <h1>Explore El Salvador </h1>
+        <button id="menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="siteplan.html" id="home">Home</a></li>
+                <li><a href="food.html" id="food">Food</a></li>
+                <li><a href="places.html" id="places">places</a></li>
+                <li><a href="contact.html" id="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/background-medium-img.webp" media="(min-width: 68em)">
+                <source srcset="images/background-image.webp" media="(min-width: 42em)">
+                <img src="images/background-small-img.webp" alt="Scenic view of El Salvador">
+            </picture>
+            <h1>EL SALVADOR <br>AWAITS YOU</h1>
+        </div>
+
+        <h2>Traditional Salvadoran Cuisine</h2>
+        <p>Salvadoran cuisine is flavorful, comforting, and deeply 
+            rooted in tradition. It often features ingredients like 
+            corn, beans, cheese, plantains, and meat. Many recipes 
+            are passed down through generations and are central to 
+            family gatherings and national celebrations.</p>
+
+        <div class="foodFlex">
+            <div id="food1"><a href="#pupusas">PUPUSAS</a></div>
+            <div id="food2"><a href="#pan">PAN CON POLLO</a></div>
+            <div id="food3"><a href="#yuca">YUCA FRITA</a></div>
+            <div id="food4"><a href="#riguas">RIGUAS</a></div>
+        </div>
+
+        <div class="container">
+            <img src="images/pupusas.webp" alt="pupusas of El Salvador" loading="lazy">
+            <label id="pupusas">
+                <p><strong>🫓 Pupusas</strong> <br>
+                Pupusas are the national dish of El Salvador. They are thick, 
+                handmade corn tortillas stuffed with fillings such as cheese, 
+                refried beans, pork (chicharrón), or a combination of these. 
+                They are traditionally served with curtido (a tangy cabbage 
+                slaw with carrots and vinegar) and a mild tomato salsa. 
+                Pupusas are a symbol of Salvadoran identity and are loved 
+                by locals and visitors alike.</p>
+                <img src="images/pupusas.webp" alt="pupusas of El Salvador" loading="lazy">
+            </label>
+
+            <label id="pan">
+                <p><strong>🥖 Pan con Pollo</strong> <br>
+                This is a popular Salvadoran sandwich made with marinated chicken, 
+                slow-cooked with tomatoes, bell peppers, and spices. The chicken 
+                is served inside a French-style bread roll, along with lettuce, 
+                cucumbers, radishes, and a special homemade sauce. Pan con pollo 
+                is often enjoyed at family gatherings and special events, 
+                especially during the holiday season.</p>
+                <img src="images/pan-con-pollo.webp" alt="pan con pollo" loading="lazy">
+            </label>
+            <img src="images/pan-con-pollo.webp" alt="pan con pollo" loading="lazy">
+            
+            <img src="images/yuca-frita.webp" alt="yuca frita" loading="lazy">
+            <label id="yuca">
+                <p><strong>🍠 Yuca Frita</strong> <br>
+                Fried yuca is a traditional side dish made from the cassava 
+                root, which is either boiled or deep-fried until crispy on 
+                the outside and soft on the inside. It's usually served with 
+                fried pork (chicharrón) and topped with curtido, offering a 
+                perfect mix of textures and bold flavors.</p>
+                <img src="images/yuca-frita.webp" alt="yuca frita" loading="lazy">
+            </label>
+
+            <label id="riguas">
+                <p><strong>🌽 Riguas</strong> <br>
+                Riguas are sweet and savory corn pancakes made with freshly 
+                ground corn and sometimes cheese. The mixture is wrapped in 
+                banana leaves and grilled or cooked on a hot griddle. Soft, 
+                slightly crispy, and naturally sweet, riguas are a delicious 
+                snack or breakfast item often enjoyed with sour cream or cheese 
+                on the side.</p>
+                <img src="images/rihuas.webp" alt="riguas image" loading="lazy">
+            </label>
+            <img src="images/rihuas.webp" alt="riguas image" loading="lazy">
+
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span> Isaac Diaz Tijuana Mexico
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

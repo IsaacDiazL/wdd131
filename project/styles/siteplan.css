@@ -20,16 +20,21 @@ h1 {
     letter-spacing: 2px;
     word-spacing: 15px;
 }
-p, ul,h2 {
+p, h2 {
     padding: 1rem;
+    line-height: 1.8;
+}
+p {
+    font-size: 1.1rem;
 }
 /* --------- HEADER --------- */
 header {
     display: grid;
     grid-template-columns: 120px 1fr;
     grid-template-rows: auto auto;
-    background-color: var(--secondary-color);
-    color: var(--second-accent-color);
+    background-image: linear-gradient(#406cca, #030438);
+    color: var(--accent-color);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.5);
 }
 header img {
@@ -48,16 +53,16 @@ header h1 {
 .navigation {
     display: flex;
     overflow: hidden;
-    justify-content: space-evenly;
-    width: 100%;
 }
 .navigation li {
     list-style: none;
+    flex: 1;
+    text-align: center;
 }
 .navigation li a {
     text-decoration: none; 
-    color: var(--second-accent-color);
-    padding: 0.7rem;
+    color: var(--accent-color);
+    padding: 0.5rem;
     align-self: center;
     text-align: center;
     font-size: 1.2rem;
@@ -65,7 +70,19 @@ header h1 {
 }
 .navigation li a:hover {
     color: var(--third-accent-color);
-    border-top: 3px solid var(--third-accent-color);
+    border-bottom: 3px solid var(--third-accent-color);
+}
+#home:hover::after {
+    content: " 🏠";
+}
+#food:hover::after {
+    content: " 🍽️";
+}
+#places:hover::after {
+    content: " 📍";
+}
+#contact:hover::after {
+    content: " 👨🏻‍💻";
 }
 #menu {
     display: none;
@@ -73,7 +90,7 @@ header h1 {
 /* --------- MAIN --------- */
 main {
     max-width: 900px;
-    margin: 1.5rem auto;
+    margin: 0 auto;
 }
 /* --------- CLASS HERO --------- */
 .hero {
@@ -90,19 +107,21 @@ main {
     width: 100%;
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    line-height: 1.5;
+    line-height: 2;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 4px;
 }
 /* --------- CLASS CONTAINER --------- */
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 2rem 0;
-    row-gap: 2rem;
+    margin: 1rem 0;
+    row-gap: 3rem;
 }
 .container img {
     width: 90%;
     justify-self: center;
+    align-self: center;
     border-radius: 1.5rem;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.6);
 }
@@ -115,10 +134,66 @@ main {
 .container label img {
     display: none;
 }
+/* --------- CLASS FOODFLEX --------- */
+.foodFlex {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 50px;
+}
+.foodFlex div {
+    width: 23%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: stretch;
+    transition: 0.5s ease-in-out;
+}
+.foodFlex div:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+.foodFlex div a {
+    align-content: center;
+    width: 100%;
+    text-decoration: none;
+    font-size: 28px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+    font-weight: 700;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+    color: white;
+}
+#food1 {
+    background-color: #0D5C63;
+    background-image: url("../images/pupusas.webp");
+    background-size: cover;
+}
+#food2 {
+    background-image: url("../images/pan-con-pollo.webp");
+    background-size: cover;
+}
+#food3 {
+    background-image: url("../images/yuca-frita.webp");
+    background-size: cover;
+}
+#food4 {
+    background-image: url("../images/rihuas.webp");
+    background-size: cover;
+}
 /* --------- FOOTER --------- */
 footer {
-    background-color: #2A5F07;
+    background-image: linear-gradient( #030438, #406cca);
+    color: white;
     padding: 1rem;
     text-align: center;
-    color: #BDF2A6;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }

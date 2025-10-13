@@ -4,6 +4,7 @@
     --accent-color: #C0E8ED;
     --second-accent-color: #BDF2A6;
     --third-accent-color: #4fe4a6;
+    --primary-font: "Protest Revolution", sans-serif;
 }
 * {
     margin: 0;
@@ -100,11 +101,13 @@ main {
     width: 100%;
 }
 .hero h1 {
-    font-size: 5rem;
+    font-size: 64px;
     font-weight: 700;
     position: absolute;
-    bottom: 25%;  
+    top: 0;
     width: 100%;
+    height: 100%;
+    align-content: center;
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
     line-height: 2;
@@ -125,13 +128,13 @@ main {
     border-radius: 1.5rem;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.6);
 }
-.container label {
+.container div {
     font-size: 1.1rem;
     line-height: 1.6;
     align-self: center;
     padding: 1rem;
 }
-.container label img {
+.container div img {
     display: none;
 }
 /* --------- CLASS FOODFLEX --------- */
@@ -187,6 +190,57 @@ main {
 #food4 {
     background-image: url("../images/rihuas.webp");
     background-size: cover;
+}
+/* --------- PLACESSECTION --------- */
+.placesSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1.5rem;
+    margin: 1rem;
+}
+.placesSection div {
+    position: relative;
+    width: 30%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.6);
+    opacity: 0.7;
+    transition: all 0.5s ease-in-out;
+}
+.placesSection div a {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    padding: 1rem;
+    font-size: 28px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    text-decoration: none;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
+.placesSection div:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+/* --------- PLACEPARENT --------- */
+.placeParent img{
+    float: right;
+    width: 35%;
+    margin: 1rem;
+    border-radius: 25px 0 25px 25px;
+    border: 1px solid var(--secondary-color);
+
+}
+.placeParent div {
+    margin: 2rem auto;
 }
 /* --------- FOOTER --------- */
 footer {
